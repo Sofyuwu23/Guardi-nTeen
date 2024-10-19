@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GuardiánTeen App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Login/Register Screen -->
+    <div id="login-container">
+        <h2>Inicio de Sesión</h2>
+        <input type="text" id="username" placeholder="Usuario">
+        <input type="password" id="password" placeholder="Contraseña">
+        <button id="login-btn">Ingresar</button>
+        <button id="register-btn">Registrarse</button>
+    </div>
+
+    <!-- Main Panel -->
+    <div id="main-panel" style="display:none;">
+        <h2>Panel Principal</h2>
+        <button id="activity-summary-btn">Resumen de Actividad</button>
+        <button id="content-filter-btn">Filtrado de Contenidos</button>
+        <button id="app-control-btn">Control de Aplicaciones</button>
+        <button id="reports-btn">Reportes Periódicos</button>
+        <button id="map-btn">Ver Mapa</button>
+    </div>
+
+    <!-- Section Containers -->
+    <div id="content-filter-container" style="display:none;">
+        <h3>Filtrado de Contenidos</h3>
+        <label>Bloquear Pornografía</label><input type="checkbox" id="block-porn">
+        <label>Bloquear Violencia</label><input type="checkbox" id="block-violence">
+        <button id="back-from-filter">Volver</button>
+    </div>
+
+    <div id="app-control-container" style="display:none;">
+        <h3>Control de Aplicaciones</h3>
+        <ul>
+            <li>WhatsApp <button class="block-app">Bloquear</button></li>
+            <li>Facebook <button class="block-app">Bloquear</button></li>
+        </ul>
+        <button id="disable-blocking-btn">Deshabilitar Bloqueo</button>
+        <button id="back-from-app-control">Volver</button>
+    </div>
+
+    <div id="reports-container" style="display:none;">
+        <h3>Reportes</h3>
+        <p>Informe semanal de actividad.</p>
+        <button id="go-back-reports">Volver</button>
+    </div>
+
+    <!-- Map Section -->
+    <div id="map-container" style="display:none;">
+        <h3>Mapa de Actividad</h3>
+        <div id="map" style="height: 400px; width: 100%;"></div>
+        <button id="back-from-map">Volver</button>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_GOOGLE_MAPS_API_KEY&callback=initMap" async defer></script>
+</body>
+</html>
